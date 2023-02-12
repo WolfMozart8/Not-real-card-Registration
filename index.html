@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- displays site properly based on user's device -->
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
 
     <link
       rel="icon"
@@ -22,16 +23,6 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <section id="card">
@@ -91,8 +82,10 @@
             name="card-number"
             id="card-number-input"
             placeholder="e.g. 1234 5678 9123 0000"
+            
             maxlength="19"
-            pattern="^\d+$"
+            pattern="^[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$"
+            data-mask="0000 0000 0000 0000"
             required
           />
           <span class="error" aria-live="polite"></span>
@@ -118,33 +111,7 @@
         <button type="submit">Confirm</button>
       </form>
 
-      <!-- <div class="success">
-        <div class="success-img">
-          <img src="./images/icon-complete.svg" alt="icon success">
-        </div>
-        <h2>THANK YOU!</h2>
-        <p>We've added your card details</p>
-        <button>continue</button>
-      </div> -->
-
     </section>
-
-    <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 
   <script src="./index.js"></script>
   </body>
